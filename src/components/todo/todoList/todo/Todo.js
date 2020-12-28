@@ -3,6 +3,7 @@ import './todo.css'
 import { Paper, Grid, Typography, Button, ButtonGroup} from '@material-ui/core'
 import TodoContext from '../../../../context/todoContext/TodoContext'
 import EditTodo from '../../editiTodo/EditTodo'
+import Modal from '../../../modal/ModalWindow'
 const Todo = ({ task }) => {
 
     const todoContext = React.useContext(TodoContext)
@@ -27,13 +28,11 @@ const Todo = ({ task }) => {
         elevation='2'
         className='paper'
         >
-            <Grid Grid container alignItems = 'center'>
-                {
-                    editTodo ?
-                    <Grid item sm={ 7 } md={ 7 } lg={ 7 } xs={ 7 } xl={ 7 }>
-                        <EditTodo />
-                    </Grid>
-                        :
+        {editTodo && <Modal>
+            <EditTodo />
+        </Modal>}
+            <Grid container alignItems = 'center' key={task.key}>
+                {                    
                     <Grid item sm={ 7 } md={ 7 } lg={ 7 } xs={ 7 } xl={ 7 }>
                         <Typography alignItems='center' variant='h6' style={{
                             marginTop: '10px',
@@ -48,7 +47,7 @@ const Todo = ({ task }) => {
                     </Grid>
                 }
                     <Grid item>
-                    { !editTodo ? <ButtonGroup>
+                    <ButtonGroup>
                         <Button
                             onClick={editSelectedTodo} 
                             variant='outlined' 
@@ -63,7 +62,7 @@ const Todo = ({ task }) => {
                         >
                             Delete
                         </Button>
-                    </ButtonGroup> : null}
+                    </ButtonGroup>
                     </Grid>
             </Grid>
         </Paper>

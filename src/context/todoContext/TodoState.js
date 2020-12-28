@@ -12,7 +12,7 @@ const TodoState = props => {
     const initialState = {
         todos: null,
         // editTodo: false,
-        editTodo: null
+        editTodo: {}
     }
 
     const [state, dispatch] = useReducer(TodoReducer, initialState)
@@ -84,7 +84,6 @@ const TodoState = props => {
 
         Firebase.database().ref(`/todo-application/todos/${task.key}`).set(task)
             .then(() => {
-                console.log('updated')
                 dispatch({type: CANCEL_EDIT})
             })
             .catch((err)=>console.log(err))
@@ -92,6 +91,12 @@ const TodoState = props => {
     
     const cancelEdit = () => {
         dispatch({type: CANCEL_EDIT})
+    }
+
+    const deleteAll = () => {
+        Firebase.database().ref(`/todo-application/todos`).remove()
+            .then(() => console.log('removed successfully'))
+            .catch(err => console.log(err))
     }
 
     return (
@@ -104,7 +109,8 @@ const TodoState = props => {
                 deleteTodo,
                 updateTodo,
                 setUpdateTodo,
-                cancelEdit
+                cancelEdit,
+                deleteAll
             }}
         >
             {props.children}

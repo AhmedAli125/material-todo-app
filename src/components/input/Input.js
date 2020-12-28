@@ -19,6 +19,8 @@ const Input = () => {
     }
 
 
+
+
     return (
         <div>
             <TextField 
@@ -37,9 +39,22 @@ const Input = () => {
                 size='large'
                 color='primary'
                 fullWidth={ true }
-                onClick={createTodo}
+                onClick={ createTodo }
+                style={ {
+                    marginBottom: '10px'
+                }}
             >
                 Add Task
+            </Button>
+            <Button
+                variant = 'contained'
+                size='large'
+                color='secondary'
+                fullWidth={ true }
+                margin='normal'
+                onClick={todoContext.deleteAll}
+            >
+                Delete All
             </Button>
         </div>
     )

@@ -33,7 +33,7 @@ function EditTodo() {
     }
 
     return (
-        <div style={{width:'inherit'}}>
+            <div style = {{ width: 'inherit' }}>
             <Grid Grid container alignItems = 'center' style={{width:'450px'}}>
                 <Grid item sm={ 8 } md={ 8 } lg={ 8 } xs={ 8 } xl={ 8 }>
                     <TextField 

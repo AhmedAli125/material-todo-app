@@ -1,6 +1,7 @@
 .container{
     margin: 10px 0;
     padding: 5px;
-    height: 60vh;
+    max-height: 60vh;
     overflow: auto;
+    max-width: 100%;
 }
