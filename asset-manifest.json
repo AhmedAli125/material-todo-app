@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/material-todo-app/static/css/main.5e69c745.chunk.css",
+    "main.js": "/material-todo-app/static/js/main.936504f5.chunk.js",
+    "main.js.map": "/material-todo-app/static/js/main.936504f5.chunk.js.map",
+    "runtime-main.js": "/material-todo-app/static/js/runtime-main.5542c1a6.js",
+    "runtime-main.js.map": "/material-todo-app/static/js/runtime-main.5542c1a6.js.map",
+    "static/js/2.2e2c5d32.chunk.js": "/material-todo-app/static/js/2.2e2c5d32.chunk.js",
+    "static/js/2.2e2c5d32.chunk.js.map": "/material-todo-app/static/js/2.2e2c5d32.chunk.js.map",
+    "index.html": "/material-todo-app/index.html",
+    "static/css/main.5e69c745.chunk.css.map": "/material-todo-app/static/css/main.5e69c745.chunk.css.map",
+    "static/js/2.2e2c5d32.chunk.js.LICENSE.txt": "/material-todo-app/static/js/2.2e2c5d32.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5542c1a6.js",
+    "static/js/2.2e2c5d32.chunk.js",
+    "static/css/main.5e69c745.chunk.css",
+    "static/js/main.936504f5.chunk.js"
+  ]
+}
